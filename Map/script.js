@@ -217,7 +217,11 @@
         
 
             console.log(maps_10);
-            // console.log(maps_10.forEach());
+            let txt = "";
+            maps_10.forEach(function (Item,Key) {
+                txt += Key + " - " + Item + "\n";
+            });
+            console.log(txt);
             
         }
 }

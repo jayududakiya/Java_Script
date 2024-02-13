@@ -120,4 +120,14 @@ What is Set() :  A JavaScript Set is a collection of unique values. Each value c
     let y = x.values();
   
     console.log(y);
-  }
+}
+
+{
+    let J = new Set ([10,20,30,40,50]);
+
+    let txt = "";
+    J.forEach(function (Item) {
+        txt = txt + Item + "\n";
+    });
+    console.log(txt);
+}
