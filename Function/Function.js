@@ -1,5 +1,9 @@
 // Basic syntax of Function
-
+/*
+function name(params) {
+    
+}
+*/
 // Declaration OF Function
 
 function Sum (a,b){ 
