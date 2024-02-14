@@ -59,10 +59,39 @@ console.log(`Immediately Invoked Function Expression (IIFE) Function `);
 
 
 
-// here return must be rquide if using variable s  
+// here return must be require if using variable s  
 
 let sub = (function Sub (a,b) {
     return (a-b);
 })(10,4);
 
 console.log(sub);
+
+
+
+
+
+console.log(`simple function`);
+function subs (a,x){
+    return a - x ;
+}
+console.log(subs(10,3)); // 7
+
+console.log(`this is Arrow Function`);
+// let Add = (a,b) =>{
+//     return a + b;
+// }
+
+// sem output is "Arrow Function in short way "
+
+let Add = (a,b) => a + b;
+
+console.log(Add(10,20));
+
+console.log(`Function in Constructor`);
+
+let HelloWorld = new Function("a","b","return a/b");
+console.log(HelloWorld(10,2));
+
+// let HelloWorld = new Function("return function(return Hello World)");
+// console.log(HelloWorld());
