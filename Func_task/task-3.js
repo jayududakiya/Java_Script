@@ -20,10 +20,5 @@
         } 
     }
 
-    console.log(Cash_count(350));
-    // let N = Cash_count(350);
-    // let N = Math.floor(Cash_count(350));
-    // let N = toString(Cash_count(350));
-    // console.log(N);
-    
+    Cash_count(prompt(`Enter You Count Money : `,));    
 }
