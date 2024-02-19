@@ -95,3 +95,105 @@ console.log(HelloWorld(10,2));
 
 // let HelloWorld = new Function("return function(return Hello World)");
 // console.log(HelloWorld());
+
+{
+    console.log("=> Function are Objects");
+    console.log("arguments.length");
+
+    function counts_param (a,b,c,f,g) {
+        return arguments.length;
+    }
+
+    console.log(counts_param(1,2,4,5,6));
+
+
+    function counts_param1 (c,f,g) {
+        return arguments.length;
+    }
+
+    console.log(counts_param1(1,2));
+
+}
+
+{
+    console.log("=> Function are Objects");
+    console.log("arguments pass parameters");
+
+    function counts_param () {
+        let sum = 0;
+        for (let i = 0; i < arguments.length; i++) {
+            sum = sum +  arguments[i];
+        }
+        return sum ;
+    }
+
+    console.log("counts_param(1+2+3+4)");
+    console.log("this Function give a Total of this numbers ",counts_param(1,2,3,4));
+
+}
+
+{
+    console.log("=> Function are Objects");
+    console.log("arguments pass parameters");
+
+    function sum_param (...array) {
+        let sum = 1;
+        for (let i = 0; i <array.length; i++) {
+            sum = sum *  array[i];
+        }
+        return sum ;
+    }
+
+    console.log("counts_param(1*2*3*4)");
+    console.log("this Function give a Total of this numbers ",sum_param(1,2,3,4));
+
+}
+
+
+{
+    console.log("=> Function in generator ");
+
+    // declaration of getreport function 
+
+    function* Generator () {
+        yield "Hello";
+        yield 1;
+        yield 2;
+        yield 3;
+        yield 4;
+        return 5;
+    }
+
+    // how to call Generator function
+    
+    let  x  = Generator();
+
+    console.log(x.next().value);
+    console.log(x.next().value);
+    console.log(x.next().value);
+    console.log(x.next().value);
+    console.log(x.next().value);
+    console.log(x.next().value);
+    console.log("this time its return 'undefined' because in this function we return only 6 time return value ");
+    console.log(x.next().value); 
+
+}
+
+{
+    console.log("=> Function in objects using ' .This ' Keyword : ");
+
+    let Product = {
+        Name : "pen",
+        Caption : "parker",
+        prices : 50 ,
+        off : 2 ,
+        show_val : function ()
+        {
+           return ` This is Product is " ${this.Caption} ${this.Name} " Price is " ${this.prices} "and Off in this Product is " ${this.off} " % `;
+        }
+    }
+
+    let data = Product.show_val();
+    console.log(data);
+    console.log(Product.Name);
+} 
