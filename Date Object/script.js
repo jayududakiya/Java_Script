@@ -1,61 +1,120 @@
 // "Date Object"
-// let date = new Date();
-// console.log(date);
-
-//  dates = new Date("december  21 , 2024 9:30:50 "); // to input time and date with string 
-
-// console.log(dates);
-
-//  dates = new Date(2024 , 4 , 5 , 8 , 30 , 21); // input all deferent numbers without string 
-
-// console.log(dates);
-
-//  dates = new Date(200000); // (Milliseconds)
-
-// console.log(d);
-
-// Sat Mar 03 1973 15:16:40 GMT+0530 (India Standard Time)
+let date = new Date(); // default object create 
+console.log(date);
 
 
+{
+    console.log(`\n>Date() in To method`);
+    
+    const nTime = new Date();
+    
+    console.log(nTime.toDateString());
+    
+    console.log(nTime.toLocaleDateString());
+    
+    console.log(nTime.toISOString());
+    
+    console.log(nTime.toLocaleString());
 
-let dates = new Date().getFullYear();
+    console.log(nTime.toLocaleTimeString());
 
-console.log("its give current full year ",dates);
+    console.log(nTime.toUTCString());
 
-dates = new Date().getDate();
+    console.log(nTime.toTimeString());
 
-console.log("its give current date ",dates);
-
-dates = new Date().getMonth();
-
-console.log("its a give current mount  ",dates);
-
-dates = new Date().getDay();
-
-console.log("its give week days number",dates);
-
-dates = new Date().getHours();
-
-console.log("Hours in 24 ",dates);
-
-dates = new Date().getMinutes();
-
-console.log("its a Minutes ",dates);
+    console.log(nTime.getTimezoneOffset());
+}
 
 
-dates = new Date().getSeconds();
+console.log("\nDate() And it's Get Methods ");
+const gTime = new Date("Feb  23, 2024 ,17:38:43:345");
+console.log(gTime);
 
-console.log("its a give Secondes   ",dates);
+{
+    
+    console.log(`\n> getDate()`);
 
-dates = new Date().getMilliseconds();
+    let getShow = gTime.getDate();
 
-console.log("its a Milliseconds ",dates);
+    console.log(getShow);
 
-dates = new Date().getTime();
+    console.log(`\n> getDay()`);
 
-console.log("its a ",dates);
+    /*
+    An integer, between 0 and 6, representing the day of the week for the given date according to local time: 0 for Sunday, 1 for Monday, 2 for Tuesday, and so on. Returns NaN if the date is invalid.
+    */ 
+    
+    getShow = gTime.getDay();
 
-// Date() And it's Set Methods  
+    console.log(getShow);
+        
+        
+    console.log(`\n> getFullYear()`);
+
+    getShow = gTime.getFullYear();
+
+    console.log(getShow);
+
+    console.log(`\n> getHours()`);
+
+    /*
+    An integer, between 0 and 23, representing the hours for the given date according to local time. Returns NaN if the date is invalid.
+    */ 
+
+    getShow = gTime.getHours();
+
+    console.log(getShow);
+
+
+    console.log(`\n> getMilliseconds()`);
+
+    getShow = gTime.getMilliseconds();
+
+    console.log(getShow);
+
+
+    console.log(`\n> getMinutes()`);
+
+    getShow = gTime.getMinutes();
+
+    console.log(getShow);
+
+    console.log(`\n> getSeconds()`);
+
+    getShow = gTime.getSeconds();
+
+    console.log(getShow);
+
+    console.log(`\n> getMonth()`);
+
+    getShow = gTime.getMonth();
+
+    /*
+    An integer, between 0 and 11, representing the month for the given date according to local time: 0 for January, 1 for February, and so on. Returns NaN if the date is invalid.
+    */ 
+
+    console.log(getShow);
+    
+    
+    console.log(`\n> getTime()`);
+    
+    getShow = gTime.getTime();
+    
+    /* This is getTime is Total of MilliSeconds from January 01 1970 to Current time   */ 
+
+    console.log(getShow);
+
+    console.log(`\n> getTimezoneOffset()`);
+
+    //The getTimezoneOffset() method returns the difference (in minutes) between local time in UTC time. 
+    
+    getShow = gTime.getTimezoneOffset();
+    
+    console.log(getShow);
+    
+}
+
+console.log("\nDate() And it's Set Methods ");  
 
 {
     console.log(`\n>Date() in setFullYear()`);
@@ -77,6 +136,7 @@ console.log("its a ",dates);
     xTime.setFullYear(2001,10,21);
 
     console.log(xTime.toDateString());
+
 
 
 }
@@ -130,12 +190,16 @@ console.log("its a ",dates);
     const xTime = new Date();
 
     xTime.setHours(9);
-    xTime.setMinutes(30);
-    xTime.setSeconds(30); 
+    xTime.setMinutes(30,40);
+    console.log(xTime);
 
+    xTime.setSeconds(30,5000); 
+    
     xTime.setMilliseconds(1000); // if msSecond is <= 999 is === 0 seconde  //  1000 == 1 seconde  and 60,000 == 1 minutes
 
-    console.log(xTime.toTimeString());
+    console.log(xTime);
+
+
 
 }
 
@@ -173,16 +237,42 @@ console.log("its a ",dates);
 
     console.log(`\n>Date() in setTime()`);
 
-    const xTime = new Date(" March 21 , 2025 , 9:30:31 ");
+    const xTime = new Date();
+
+
+    // xTime.setTime("19:20:45");
+    xTime.setTime("19");
 
     console.log(xTime);
 
 }
 
+// {
+
+//     console.log(`\n>Date() in setDay()`);
+
+//     const xTime = new Date();
+
+
+//     // xTime.setTime("19:20:45");
+//     xTime.setDay(2);
+
+//     console.log(xTime);
+
+// }
+
 // Date() And it's SetUTC  Methods  
 
 /*
 Full form of UTC is Coordinated Universal Time or Universal Time Coordinated (UTC). It is a coordinated time scale maintained by the Bureau International des Poids et Mesures (BIPM) and also referred to as ZULU time.
+
+UTC methods use UTC time (Coordinated Universal Time).
+
+UTC time is the same as GMT (Greenwich Mean Time).
+
+The difference between Local time and UTC time can be up to 24 hours.
+
+
 */
 
 {
@@ -218,3 +308,4 @@ Full form of UTC is Coordinated Universal Time or Universal Time Coordinated (UT
 
     console.log(nTime);
 }
+
