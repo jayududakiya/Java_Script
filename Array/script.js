@@ -372,7 +372,7 @@
 }
 
 {
-    console.log(`\nThis is includes() Method`);
+    console.log(`\nThis is copyWithin() Method`);
 
     let Ntext = [10,20,30,40,50,55,66,99];
 
