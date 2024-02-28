@@ -9,16 +9,17 @@
         for (let i = 1; i < Num ; i++) {
             if ( Num % i == 0) {
                 perfect += i ;
+                // console.log(perfect);
             }    
         }
         if (perfect === Num) {
-            return console.log("this is Number is Perfect", perfect);
+            return console.log("this is Number is Perfect", Num);
         } 
         else {
-            return console.log("this is Number is NOT Perfect", perfect);
+            return console.log("this is Number is NOT Perfect", Num);
         }
     }
 
-    MyperfectNum(6);
+    MyperfectNum(18);
     
 }
