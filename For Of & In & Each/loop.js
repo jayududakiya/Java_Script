@@ -26,14 +26,14 @@
 
     // console.log(`\nfor of loop`);
     
-    // for (const iterator of product) {
-    //     console.log(iterator);   
-    // }
+    for (const iterator of product) {
+        console.log(iterator);   
+    }
     
-    // console.log(`\nfor in loop`);
-    // for (const iterator in product) {
-    //     console.log(product[iterator]);   
-    // }
+    console.log(`\nfor in loop`);
+    for (const iterator in product) {
+        console.log(product[iterator]);   
+    }
 }
 
 {
@@ -46,10 +46,10 @@
 
     // in object for of loop not work it's got error
     
-    // console.log(`\nfor in loop`);
-    // for (const iterator in profile) {
-    //     console.log( iterator , " : ",profile[iterator]);   
-    // }
+    console.log(`\nfor in loop`);
+    for (const iterator in profile) {
+        console.log( iterator , " : ",profile[iterator]);   
+    }
 }
 
 {

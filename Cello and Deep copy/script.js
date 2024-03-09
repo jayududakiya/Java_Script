@@ -11,11 +11,11 @@
 
     // with out rest parameters  cello copy
 
-    let NewProducts = MyProducts;
+    // let NewProducts = MyProducts;
 
     // with rest parameters deep copy
     
-    //  NewProducts = [...MyProducts];
+     NewProducts = [...MyProducts];
     
     // change in array 
     NewProducts.push('Tablets');

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+    <style>
+        body
+        {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+        }
+        .text-I{
+            color: #0000ff;
+            background-color: red;
+            transition: 0.2s all linear;
+        }
+        .text-II{
+            color: red;
+            transition: 0.3s all linear;
+            background-color:blue;
+        }
+
+        .Demo-div{
+            background-color: lightcoral;
+            width: 200px ;
+            height: 200px ;
+            margin: 10px auto;
+            border: 2px solid black;
+        }
+
+        .click-div{
+            background-color: lightblue;
+            width: 100px ;
+            height: 100px ;
+            margin: 10px auto;
+            border-radius: 50%;
+            border: 3px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- use of getElementById -->
+    <!-- <div id="Demobox-1">
+        <p id="text">
+            This is text line 1
+        </p>
+        <p id="text-2">
+            This is text line 2
+        </p>
+        <button onclick="Btn_click()">Try Button</button>
+    </div> -->
+    
+    <!-- use of getElementByClassName -->
+    <!-- <div class="box-II">
+        <p class="text">
+            This is text line 1
+        </p>
+        <p class="text">
+            This is text line 2
+        </p>
+        <p class="text">
+            This is text line 3
+        </p>
+        <p class="text">
+            This is text line 4
+        </p>
+        <p class="text">
+            This is text line 5
+        </p>
+        <p class="text">
+            This is text line 6
+        </p>
+        <p class="text">
+            This is text line 7
+        </p>
+        <p class="text">
+            This is text line 8
+        </p>
+        <p class="text">
+            This is text line 9
+        </p>
+        <p class="text">
+            This is text line 10
+        </p>
+        <button onclick="Btn_click1()">Try Button </button>
+    </div> -->
+
+
+    <!-- use of querySelectorAll && querySelector -->
+    <!-- <div class="box-III" id="box-1">
+        <p>this is p tag in Box-III</p>
+        <h3>this is h3 tag in Box-III</h3>
+        <p>this is p tag in Box-III</p>
+        <h1>this is h1 tag in Box-III</h1>
+        <p>this is p tag in Box-III</p>
+        <h3>this is h3 tag in Box-III</h3>
+        <p>this is p tag in Box-III</p>
+        <p>this is p tag in Box-III</p>
+        <h1>this is h1 tag in Box-III</h1>
+        <h2>this is h2 tag in Box-III</h2>
+        <h2>this is h2 tag in Box-III</h2>
+        <h2>this is h2 tag in Box-III</h2>
+        <p>this is p tag in Box-III</p>
+        <h2>this is h2 tag in Box-III</h2>
+    </div>
+    <button onclick="Query_click()">click me </button> -->
+    
+    
+    <!-- use of getElementByTagName -->
+    <!-- <div class="box-III" id="box-1">
+        <ul>
+            <li>item-1</li>
+            <li>item-2</li>
+            <li>item-3</li>
+            <li>item-4</li>
+            <li>item-5</li>
+        </ul>
+        <p>Lorem ipsum dolor sit <span> amet span </span> consectetur adipisicing elit. Vel libero, <b>hello b</b> odit beatae maxime mollitia at.</p>
+    </div>
+    <button onclick="tag_click()">click me </button> -->
+
+
+    <!--  alert messages-->
+
+    <!-- <p name="Pteg">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et a nisi ut quia hic illo aut molestias dignissimos dicta neque quidem dolorum, voluptatem commodi totam laudantium eum sed minima saepe!</p>
+    <button onclick="Check()">check me</button>
+    -->
+    
+    
+    <!-- Dome Event listeners  -->
+    
+    <h1 onclick="showmessages1()">click me</h1>
+    <button type="button" id="BTN" onclick="Messages2()"> Button </button>
+    <div class="Demo-div">
+        hello 
+    </div>
+    
+    <!-- <script src="script.js"></script>  -->
+    <script src="Domevenet.js"></script> 
+</body>
+</html>
