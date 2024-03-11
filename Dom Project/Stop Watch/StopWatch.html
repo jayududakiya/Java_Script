@@ -3,37 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
     <link rel="stylesheet" href="StopWatch.css">
     <title>Stop Watch</title>
 </head>
 <body>
 
     <main>
+
+        <video autoplay loop>
+            <source src="pexels-2.mp4">
+        </video>
+
         <div class="box">
 
             <div class="text-box">
-
-            <p id="Hoers" title="Hoers">00</p>
+    
+            
+            <p id="Hour" title="Hour">00</p>
             <p>:</p>
-            <p id="Minutes" title="Minutes">00</p>
+            <p id="Minute" title="Minute">00</p>
             <p>:</p>
-            <p id="Seconds" title="Seconde">00</p>
+            <p id="Second" title="Second">00</p>
             <p>:</p>
-            <p id="Milliseconds" title="Milliseconds">00</p>
+            <p id="Millisecond" title="Millisecond">000</p> 
+           
 
             </div>
 
             <div class="btn-box">
 
-                <button type="button" onclick="ResetTime()">Reset</button>
+                <button type="button" onclick="ResetTime()"><i class="ri-restart-line"></i> </button>
 
-                <button type="button" onclick="stopCount()">start</button>
+                <button type="button" id="start-btn" onclick="stopCount()">
+                    <i class="ri-play-large-line"></i>
+                </button>
 
-                <button type="button" id="Btn"> laps </button>
-
+                <button type="button" onclick="LapTime()">
+                    <i class="ri-timer-line"></i>
+                </button>
 
             </div>
+            <div class="lap-box">
+                <ol></ol>
+                <button id="clear"><i class="ri-close-large-line"></i></button>
+            </div>
         </div>
+
     </main>
     <script src="StopWatch.js"></script>
 </body>
