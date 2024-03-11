@@ -1,4 +1,4 @@
-{
+    {
     let NewText;
     const e = document.getElementById("text");
     
