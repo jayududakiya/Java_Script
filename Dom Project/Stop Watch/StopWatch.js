@@ -61,17 +61,22 @@ let count = 0 ;
 
 
 function LapTime (){
-    list.style.display = "block"
-    count += 1;
-    console.log(`This is ${count} lap : ${laps}`)
-
-    let elm = document.createElement("li");
-    elm.innerHTML = `#${count} : \t\t ${laps}`;
-    list.appendChild(elm);
-
-    if(list.innerHTML !== ""){
-        clearAll.style.opacity = 1;
-        clearAll.style.display = "flex";
+    if(laps === undefined){
+        list.innerHTML == "";
+    }else{
+        list.style.display = "block"
+        count += 1;
+        console.log(`This is ${count} lap : ${laps}`)
+            let elm = document.createElement("li");
+            elm.innerText = `#${count} : \t\t ${laps}`;
+            list.appendChild(elm);
+        if(list.innerHTML !== ""){
+            clearAll.style.opacity = 1;
+            clearAll.style.display = "flex";
+        }
+        if(laps == laps){
+            laps = undefined;
+        }
     }
 }
 
@@ -91,6 +96,8 @@ function ResetTime () {
     Min = 0 ;
     Sec = 0;
     Milsec = 0;
+
+    laps = undefined;
 
     BTN.className = "ri-play-large-line";
 
@@ -114,6 +121,7 @@ function stopCount (){
     }
     else if(clicks == true){
         BTN.className = "ri-play-large-line";
+        // laps = undefined;
         clearInterval(ID);
         clicks = false ;
         console.log('Clicks = ', clicks);

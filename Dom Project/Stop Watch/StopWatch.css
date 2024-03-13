@@ -167,6 +167,10 @@ ol{
     text-align: center;
     max-height: 200px;
     overflow-y: scroll;
+    display: flex;
+    align-items:center;
+    justify-content:flex-end;
+    flex-flow: column nowrap;
 }
 
 ol::-webkit-scrollbar{
