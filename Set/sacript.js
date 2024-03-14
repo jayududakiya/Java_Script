@@ -131,3 +131,27 @@ What is Set() :  A JavaScript Set is a collection of unique values. Each value c
     });
     console.log(txt);
 }
+
+
+
+{
+    console.log(`\nAdvance In Set `);
+
+    let UserName = ["harsh","Nikhil","piyush","Utsav","Rahul","Vivek"];
+
+    const User = new Set([1,2,3,5,6,6,9,2,3]);
+    
+    User.add(UserName);
+
+    User.add(["rakesh","akash"]);
+    
+    // console.log(User.keys());
+
+    console.log(User.values(6));
+
+    let text = ""
+    for (const val of User) {
+        text +=val+"\n";
+    }
+    console.log(text);
+}
