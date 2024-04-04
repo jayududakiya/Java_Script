@@ -13,6 +13,7 @@ fetch(URL)
     })
     .then((data)=>{
         const id = data[4].id;
+        console.log(data[4].title);
         const URL2 = `${URL}/${id}`
         console.log(URL2);
         return fetch(URL2);

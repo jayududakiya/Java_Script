@@ -44,3 +44,11 @@ OrderTea()
         // p.innerText = text;
     // })
 
+
+    const x = {
+        key1 : "v1",
+        key2 : "v2"
+    }
+
+
+    console.log(x);

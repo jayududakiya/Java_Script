@@ -7,7 +7,7 @@
             this.name = name,
             this.sname = sname
         }
-        display = function () 
+        display = fnction () 
         {
             return "Hello " + this.name + this.sname ;
         }

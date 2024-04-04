@@ -1,16 +1,3 @@
-// student.prototype.Name = "J";
-// student.prototype.rollnumber = 21;
-// student.prototype.class = 10;
-// student.about = function () {
-//     console.log(`Hello MY name is ${this.Name} And My RollNumber is ${this.rollnumber} i am From ${this.class} Class`);
-// }
-
-// function student () {
-//     student.about.bind(student.prototype);
-// }
-
-// student();
-
 const StudentData = {
   About() {
     return `Hello my name is : ${this.StuName}\nMy Roll Number is : ${this.RollNumber}\nI am From : ${this.Class} Class`;
@@ -48,3 +35,20 @@ const NewStu = Object.assign(Student1,Student2);
 // console.log(NewStu.About.bind(Student1)());
 
 console.log(NewStu);
+
+
+
+
+// const obj1  = {
+//   key1 : "value1",
+//   key2 : "value2"
+// }
+ 
+// let obj2  = {
+//   key3 : "value3",
+//   key4 : "value4"
+// }
+
+// obj2 = Object.create(obj1);
+
+// console.log(obj2.key3);
