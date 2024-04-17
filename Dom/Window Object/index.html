@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="windowObj.js" defer></script>
+    <title>Window Object </title>
+    <style>
+        .text-center{
+            text-align: center;
+        }
+        div{
+            text-align: center;
+            padding: 20px;
+        }
+        label{
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 3px;
+        }
+    </style>
+</head>
+<body>
+    <button id="googleBtn">Open Google </button>
+    <button id="youtubeBtn" >Open Youtube </button>
+    <button id="close" >Close All</button>
+    <br>
+    <br>
+    <a
+    href="https://support.mozilla.org/products/firefox"
+    target="SingleSecondaryWindowName">
+    Firefox FAQ (opens in another, possibly already existing, tab)
+</a>
+<br>
+<br>
+<a href="https://google.com" target="GoogleWindow">Google Link</a>
+    <br>
+    <br>
+    <a href="https://google.com" target="Google">Google Link</a>
+    <br>
+    <br>
+    <a target="WikipediaWindow" href="https://www.wikipedia.org">
+        Wikipedia (opens in new tab)
+    </a>
+    <h1 class="text-center">Location method </h1>
+    <hr>
+    <p class="text-center">Url Information </p>
+    <p id="show-text" ></p>
+    <h1 class="text-center">page Re-dirac button with method s </h1>
+    <div>
+        <button id="show-text-1" >movie</button>
+        <button id="show-text-2" >Yahoo</button>
+        <button id="show-text-3" >Youtube </button>
+        <button id="show-text-4" >Reload</button>
+    </div>
+    
+    <h1 class="text-center"> Navigator Object Methods </h1>
+    <div id="navigator-text">
+        <input type="text" name="copy" id="copy-box" placeholder="Copy hear ">
+        <label for="copy-box" id="copy-btn">Copy</label>
+        <br>
+        <br>
+        <input type="text" id="past-box" placeholder="Past hear">
+        <label for="past-box" id="past-btn">Past</label>
+    </div>
+    
+</body>
+</html>
