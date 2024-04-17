@@ -58,7 +58,7 @@ function addList(){
         `;
     
     input.value = "";
-    Todolist.append(li);
+    Todolist.prepend(li);
     console.log("Add",Todo);
 }
 
@@ -93,6 +93,7 @@ function targetButton (e){
 function RemoveData (removeElement){
     Todo.map((obj,ind)=>{
         if(obj.id === Number(removeElement.id)){
+            // Todo.slice(ind,ind+1);
             Todo.splice(ind,ind+1);
         }
     })
