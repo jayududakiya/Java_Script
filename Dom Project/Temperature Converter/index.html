@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temperature Converter</title>
+    <style>
+      body {
+        display: flex;
+        min-height: 100vh;
+        background: #ddd;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      h1{
+        margin: 10px auto;
+        font-size: 1rem;
+      }
+      .input-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column wrap;
+        margin: auto;
+        border-radius: 30px;
+        max-width:560px;
+        height: 200px;
+        box-shadow: rgba(50, 50, 93, 0.2) 0px 30px 60px -12px inset,
+          rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+        font-size: 2rem;
+      }
+      p{
+        width: 90%;
+        font-size: 1rem;
+        display: flex;
+        justify-content:space-between;
+        text-align: center;
+      }
+      input {
+        display: block;
+        font-size: 1.2rem;
+        max-width: 30%;
+        padding: 6px 12px;
+        border-radius: 20px;
+        outline: none;
+        border: 0px;
+        background: #fff;
+        color: royalblue;
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px,
+          rgba(0, 0, 0, 0.24) 0px 1px 2px;
+      }
+      input:focus {
+        color: darkblue;
+      }
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+      }
+      .box{
+        width: 95%;
+        margin: 20px auto;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content:space-between;
+        align-items: center;
+      }
+
+    </style>
+  </head>
+  <body>
+      <div class="input-wrapper">
+        <h1>Temperature Converter</h1>
+        <p> 
+            <small>Celsius</small>
+             <small>Fahrenheit</small>
+        </p>
+        <div class="box">
+            <input
+            type="number"
+            value="0"
+            name=""
+            minlength="10"
+            id="Celsius-in"
+            minlength="9" 
+            maxlength="10"
+            inputmode="numeric"
+          />
+          <span> = </span>
+          <input type="number" inputmode="numeric" minlength="9" maxlength="10" value="32" name="" id="Fahrenheit-in" />
+        </div>
+
+    </div>
+
+    <script>
+      const Cel = document.querySelector("#Celsius-in");
+      const Fah = document.querySelector("#Fahrenheit-in");
+
+      Cel.addEventListener("input", function () {
+        if (Cel.value === "") {
+          Fah.value = 0;
+        } else {
+          Fah.style.color = "blue";
+          let FahValue = (Cel.value * 9) / 5 + 32;
+          Fah.value = FahValue.toFixed(4);
+        }
+      });
+
+      Fah.addEventListener("input", function () {
+        if (Fah.value === "") {
+          Cel.value = 0;
+        } else {
+          Cel.style.color = "blue";
+          let CelValue = ((Fah.value - 32) * 9) / 5;
+          Cel.value = CelValue.toFixed(4);
+        }
+      });
+    </script>
+  </body>
+</html>
