@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Local storage and Session storage</h1>
+
+
+    <div class="main">
+        <input type="checkbox" id="chk" aria-hidden="true">
+
+        <div class="login">
+            <form class="form" id="login-form" >
+                <label for="chk" aria-hidden="true">Log in</label>
+                <input class="input email-input" type="email" name="email" placeholder="Email" >
+                <p id="Email-Error" class="Error">
+                </p>
+                <input class="input  password-input" type="password" name="pswd" placeholder="Password" >
+                <p id="pass-Error" class="Error">
+                </p>
+                <button>Log in</button>
+            </form>
+        </div>
+
+        <div class="register">
+            <form class="form" id="register-form">
+                <label for="chk" aria-hidden="true">Register</label>
+                <input class="input user-input" type="text" name="txt" placeholder="Username" required>
+                <p  id="User-Error" class="Error">
+                </p>
+                <input class="input email-input" type="email" name="email" placeholder="Email" required>
+                <p  id="Re-Email-Error" class="Error">
+                </p>
+                <input class="input password-input" type="password" name="pswd" placeholder="Password" required>
+                <p  id="Re-pass-Error" class="Error">
+                </p>
+                <button>Register</button>
+            </form>
+        </div>
+    </div>
+
+    <Script src="Storage.js"></Script>
+</body>
+
+</html>
