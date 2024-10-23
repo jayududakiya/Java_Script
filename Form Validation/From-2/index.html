@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+
+<body class="">
+    <div class="flex items-center p-4 mb-4 text-sm text-green-800 rounded-lg bg-yellow-50 hidden" role="alert">
+        <svg class="flex-shrink-0 inline w-4 h-4 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor" viewBox="0 0 20 20">
+            <path
+                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
+        </svg>
+        <span class="sr-only">Info</span>
+        <div>
+            Form details was NOT submited
+            <span class="font-medium">Warning</span>
+        </div>
+    </div>
+    <div class="flex items-center p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 " role="alert">
+        <svg class="flex-shrink-0 inline w-4 h-4 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor" viewBox="0 0 20 20">
+            <path
+                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
+        </svg>
+        <span class="sr-only">Info</span>
+        <div>
+            Form details was submited
+            <span class="font-medium">SuccessFull</span>
+        </div>
+    </div>
+    <!-- Form val -->
+    <div class="mx-auto w-[650px] py-10">
+        <form id="user_form">
+            <div class="grid gap-6 mb-6 md:grid-cols-2">
+                <!-- First -->
+                <div>
+                    <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900">First name</label>
+                    <input type="text" id="first_name"
+                        class="border border-gray-300 text-gray-900 text-sm rounded-lg border-[2px] outline-none block w-full p-2.5 "
+                        placeholder="John" />
+                    <p class="mt-2 text-sm inline-block text-blue-400">
+                        First name: 2-10 letters, no numbers.
+                    </p>
+                </div>
+
+                <div>
+                    <label for="last_name" class="block mb-2 text-sm font-medium text-gray-900 ">Last name</label>
+                    <input type="text" id="last_name"
+                        class="border border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5 border-[2px] outline-none"
+                        placeholder="Doe" />
+                    <p class="mt-2 text-sm inline-block text-blue-400">
+                        Last name: 2-10 letters, no numbers.
+                    </p>
+                </div>
+                <!-- Seconde -->
+                <div class="hidden">
+                    <label for="company" class="block mb-2 text-sm font-medium text-gray-900 ">Company</label>
+                    <input type="text" id="company"
+                        class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                        placeholder="Flowbite" />
+                </div>
+                <div class="hidden">
+                    <label for="website" class="block mb-2 text-sm font-medium text-gray-900 ">Website URL</label>
+                    <input type="url" id="website"
+                        class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                        placeholder="flowbite.com" />
+                </div>
+                <!-- Seconde - 1  -->
+                <div>
+                    <label for="countries" class="block mb-2 text-sm font-medium text-gray-900">Select an
+                        countries</label>
+                    <select id="countries"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 ">
+                        <option selected>Choose a country</option>
+                        <option value="US">United States</option>
+                        <option value="CA">Canada</option>
+                        <option value="FR">France</option>
+                        <option value="DE">Germany</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="language" class="block mb-2 text-sm font-medium text-gray-900">Select an
+                        language</label>
+                    <select id="language"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 ">
+                        <option selected>Choose a language</option>
+                        <option value="HIN">Hindi</option>
+                        <option value="GUJ">Gujarati</option>
+                        <option value="ENG">English</option>
+                        <option value="FR">France</option>
+                    </select>
+                </div>
+                <!-- third -->
+                <div>
+                    <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 ">Phone number</label>
+                    <input type="tel" id="phone"
+                        class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                        placeholder="123-45-678" />
+                    <p class="mt-2 text-sm inline-block text-blue-400">
+                        9328919182
+                    </p>
+                </div>
+                <div>
+                    <label for="age" class="block mb-2 text-sm font-medium text-gray-900 ">Age</label>
+                    <input type="number" id="age"
+                        class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                        placeholder="23" />
+                    <p class="mt-2 text-sm inline-block text-blue-400"></p>
+                </div>
+            </div>
+            <div class="mb-6">
+                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 ">Email address</label>
+                <input type="email" id="email"
+                    class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                    placeholder="john.doe@company.com" />
+                <p class="mt-2 text-sm inline-block text-blue-400">
+                    john@gamil.com
+                </p>
+            </div>
+            <div class="mb-6">
+                <label for="message" class="block mb-2 text-sm font-medium text-gray-900">Your Address</label>
+                <textarea id="message" rows="4"
+                    class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                    placeholder="Write your Address..."></textarea>
+            </div>
+            <div class="my-6">
+                <div class="mb-3">
+                    <label for="password" class="block mb-2 text-sm font-medium text-gray-900 ">Password</label>
+                    <input type="password" id="password"
+                        class="border border-gray-300 text-gray-900 text-sm rounded-lg outline-none block w-full p-2.5 "
+                        placeholder="•••••••••" />
+                </div>
+                <div class="">
+                    <label for="confirm_password" class="block mb-2 text-sm font-medium text-gray-900 ">Confirm
+                        password</label>
+                    <input type="password" id="confirm_password"
+                        class="border border-gray-300 text-gray-900 text-sm rounded-lg outline-none block w-full p-2.5 "
+                        placeholder="•••••••••" />
+                    <p class="my-1.5 text-sm inline-block text-blue-400"></p>
+                </div>
+                <ul id="PasswordReq" class="max-w-md text-gray-500 list-inside ">
+                    <li class="flex items-center ">
+                        <svg class="w-3.5 h-3.5 me-2 flex-shrink-0"
+                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            viewBox="0 0 20 20">
+                            <path
+                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                        </svg>
+                        At least 8 characters long
+                    </li>
+                    <li class="flex items-center ">
+                        <svg class="w-3.5 h-3.5 me-2 flex-shrink-0"
+                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            viewBox="0 0 20 20">
+                            <path
+                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                        </svg>
+                        should contain at least one digit
+                    </li>
+                    <li class="flex items-center ">
+                        <svg class="w-3.5 h-3.5 me-2 flex-shrink-0"
+                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            viewBox="0 0 20 20">
+                            <path
+                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                        </svg>
+                        At least one lowercase character
+                    </li>
+                    <li class="flex items-center ">
+                        <svg class="w-3.5 h-3.5 me-2  flex-shrink-0" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                        </svg>
+                        At least one special character, e.g., ! @ # ?
+                    </li>
+                </ul>
+            </div>
+            <button type="submit"
+                class="text-white block bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center ">Submit</button>
+        </form>
+    </div>
+
+    <script src="FromVal.js"></script>
+</body>
+
+</html>
