@@ -4,15 +4,15 @@ const Todolist = document.querySelector(".todo-container");
 
 // let listText = ""
 
-const Todo = [
+let Todo = [
     {id : 123, data : "HTML"},
     {id : 143, data : "CSS"},
-    {id : 133, data : "JAVASCRIPT"},
-    {id : 163, data : "JQUERY"},
-    {id : 183, data : "REACT"},
-    {id : 193, data : "NODE"},
-    {id : 103, data : "Next.js"},
-    {id : 102, data : "Node.js"}
+    // {id : 133, data : "JAVASCRIPT"},
+    // {id : 163, data : "JQUERY"},
+    // {id : 183, data : "REACT"},
+    // {id : 193, data : "NODE"},
+    // {id : 103, data : "Next.js"},
+    // {id : 102, data : "Node.js"}
 ];
 
 if(input.value === "" || Todo !== ""){
@@ -90,12 +90,41 @@ function targetButton (e){
 }
 
 
-function RemoveData (removeElement){
-    Todo.map((obj,ind)=>{
-        if(obj.id === Number(removeElement.id)){
-            // Todo.slice(ind,ind+1);
-            Todo.splice(ind,ind+1);
-        }
-    })
-    console.log("Remove",Todo);
+// function RemoveData (removeElement){
+//     console.log(removeElement,"removeElement")
+//     Todo.map((obj,ind)=>{
+//         console.log(obj,"obj")
+//         if(obj.id === Number(removeElement.id)){
+//             // Todo.slice(ind,ind+1);
+//             Todo.splice(ind,1);
+//         }
+//     })
+//     console.log("Remove",Todo);
+// }
+
+function RemoveData(removeElement) {
+    Todo = Todo.filter(obj => obj.id !== Number(removeElement.id));
+    console.log("Remove", Todo);
 }
+
+/*
+// function RemoveData (removeElement){
+//     console.log(removeElement,"removeElement")
+//     Todo.map((obj,ind)=>{
+//         console.log(obj,"obj")
+//         if(obj.id === Number(removeElement.id)){
+//             // Todo.slice(ind,ind+1);
+//             Todo.splice(ind,1);
+//         }
+//     })
+//     console.log("Remove",Todo);
+// }
+
+
+
+
+
+
+// Todo.slice(ind,ind+1);
+   Todo.splice(ind,1);
+*/ 
